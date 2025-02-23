@@ -10,11 +10,12 @@ import { RadioGroup } from "~/components/ui/radio-group"
 import ThemeCard from "./theme-card";
 
 export default function ThemesGroup() {
+    const { setTheme, theme } = useTheme();
     return (
-        <RadioGroup>
-            <ThemeCard image={system} title="System Default" checked />
-            <ThemeCard image={lightImage} title="Light" />
-            <ThemeCard image={darkImage} title="Dark" />
+        <RadioGroup className="flex gap-4">
+            <ThemeCard value="system" image={system} title="System Default" checked={theme === "system"} />
+            <ThemeCard value="light" image={lightImage} title="Light" checked={theme === "light"} />
+            <ThemeCard value="dark" image={darkImage} title="Dark" checked={theme === "dark"} />
         </RadioGroup>
     )
 }
