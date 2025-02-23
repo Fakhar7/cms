@@ -13,7 +13,6 @@ import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
-  SidebarHeader,
   SidebarRail,
   SidebarTrigger,
 } from "~/components/ui/sidebar"
@@ -96,7 +95,7 @@ const data = {
       items: [
         {
           title: "General",
-          url: "#",
+          url: "/settings/general",
         },
         {
           title: "Appearance",
