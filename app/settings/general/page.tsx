@@ -3,6 +3,9 @@ import { Separator } from "~/components/ui/separator";
 import SiteStatus from "./chunks/site-status";
 import { Input } from "~/components/ui/input";
 import { Textarea } from "~/components/ui/textarea";
+import { LanguageSelect } from "~/components/combo-select";
+import { Button } from "~/components/ui/button";
+import { Switch } from "~/components/ui/switch";
 
 export default function GeneralPage() {
   return (
@@ -13,8 +16,9 @@ export default function GeneralPage() {
           Settings and options for your application
         </p>
       </div>
-      <Separator className="mb-10" />
+      <Separator className="my-10" />
       <SiteStatus />
+      <Separator className="my-10" />
       <div className="mb-20">
         <h1 className="text-lg font-bold underline mb-4">
           1. Basic Information
@@ -29,7 +33,6 @@ export default function GeneralPage() {
             </div>
             <Input defaultValue="Sultandev" className="max-w-92" />
           </div>
-          <Separator />
           <div className="space-y-2 flex justify-between">
             <div>
               <h1 className="font-bold">Tagline</h1>
@@ -41,32 +44,25 @@ export default function GeneralPage() {
           </div>
         </div>
       </div>
+      <Separator className="my-10" />
       <div>
         <h1 className="text-lg font-bold underline mb-4">
-          2. Site language
+          3. Comments
         </h1>
         <div className="space-y-5 mt-10">
-          <div className="space-y-2 flex justify-between items-center">
+          <div className="space-y-2 flex justify-between items-center gap-4">
             <div>
-              <h1 className="font-bold">Language</h1>
+              <h1 className="font-bold">Enable</h1>
               <p className="text-sm text-muted-foreground">
-                Default language for your site
+                You can disable or enable comments on your site
               </p>
             </div>
-            <Input defaultValue="Sultandev" className="max-w-92" />
-          </div>
-          <Separator />
-          <div className="space-y-2 flex justify-between">
-            <div>
-              <h1 className="font-bold">Tagline</h1>
-              <p className="text-sm text-muted-foreground">
-                A quick snapshot for your site.
-              </p>
-            </div>
-            <Textarea defaultValue="I am software developer and researcher" className="max-w-92" />
+            <Switch />
           </div>
         </div>
       </div>
+      <Separator className="my-10" />
+      <Button>Save Changes</Button>
     </div>
   );
 }
