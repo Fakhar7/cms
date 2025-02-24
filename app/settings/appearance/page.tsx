@@ -18,11 +18,9 @@ function PageDetails() {
 
 export default function AppearancePage() {
   return (
-    <div className="flex items-center justify-center">
-      <div className=" w-full max-w-2xl m-auto mt-26 p-2">
-        <PageDetails />
-        <ThemeBody />
-      </div>
-    </div>
+    <>
+      <PageDetails />
+      <ThemeBody />
+    </>
   );
 }
