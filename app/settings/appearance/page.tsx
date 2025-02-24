@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import ThemeBody from "./theme-body";
+import { Separator } from "~/components/ui/separator";
 
 export const metadata: Metadata = {
   title: "Appearance",
@@ -20,6 +21,7 @@ export default function AppearancePage() {
   return (
     <>
       <PageDetails />
+      <Separator className="my-10" />
       <ThemeBody />
     </>
   );
