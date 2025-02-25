@@ -8,7 +8,7 @@ interface TitleStore {
 }
 
 export const useTitle = create<TitleStore>((set) => ({
-    title: 'Home',
+    title: '',
     setTitle: (title: string) => set({ title }),
 }));
 
